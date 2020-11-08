@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(lldb) Launch",
+      "type": "lldb",
+      // Running the program does not work correctly in vscode - it's sent to the background.
+      // So we run it using a task instead and then attach to the running program.
+      "request": "launch",
+      "program": "${workspaceFolder}/build/subprojects/Build/wx_sizers_tutorial_core/main.app",
+      "preLaunchTask": "Build with CMake"
+    }
+  ]
+}

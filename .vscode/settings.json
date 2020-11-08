@@ -1,0 +1,30 @@
+{
+  "files.associations": {
+    "*.xpm": "cpp",
+    "array": "cpp",
+    "hash_map": "cpp",
+    "hash_set": "cpp",
+    "bitset": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp",
+    "regex": "cpp",
+    "utility": "cpp",
+    "__hash_table": "cpp",
+    "__split_buffer": "cpp",
+    "deque": "cpp",
+    "iterator": "cpp",
+    "list": "cpp",
+    "queue": "cpp",
+    "random": "cpp",
+    "stack": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "vector": "cpp",
+    "iostream": "cpp"
+},
+  "cmake.configureOnOpen": false,
+  "editor.formatOnSave":true,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 4
+}
