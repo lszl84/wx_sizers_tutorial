@@ -1,4 +1,3 @@
-
 #include <wx/wx.h>
 
 class MyApp : public wxApp
@@ -17,12 +16,11 @@ public:
 
 bool MyApp::OnInit()
 {
-    MyFrame *frame = new MyFrame("Hello World", wxPoint(50, 50), wxSize(450, 340));
+    MyFrame *frame = new MyFrame("Hello World", wxDefaultPosition, wxDefaultSize);
     frame->Show(true);
     return true;
 }
 
-MyFrame::MyFrame(const wxString &title, const wxPoint &pos, const wxSize &size)
-    : wxFrame(NULL, wxID_ANY, title, pos, size)
+MyFrame::MyFrame(const wxString &title, const wxPoint &pos, const wxSize &size) : wxFrame(nullptr, wxID_ANY, title, pos, size)
 {
 }
