@@ -36,8 +36,8 @@ MyFrame::MyFrame(const wxString &title, const wxPoint &pos, const wxSize &size) 
     sizer->Add(panel_top, 1, wxEXPAND | wxLEFT | wxTOP | wxRIGHT, 10);
     sizer->Add(panel_bottom, 1, wxEXPAND | wxALL, 10);
 
-    wxSizer *sizer_bottom = new wxBoxSizer(wxHORIZONTAL);
-    sizer_bottom->Add(panel_bottom_right, 1, wxEXPAND | wxALL, 10);
+    wxSizer *sizer_bottom = new wxBoxSizer(wxVERTICAL);
+    sizer_bottom->Add(panel_bottom_right, 1, wxALIGN_RIGHT | wxALL, 10);
 
     panel_bottom->SetSizerAndFit(sizer_bottom);
 
