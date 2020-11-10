@@ -29,17 +29,17 @@ MyFrame::MyFrame(const wxString &title, const wxPoint &pos, const wxSize &size) 
     wxPanel *panel_bottom = new wxPanel(this, wxID_ANY, wxDefaultPosition, wxSize(200, 100));
     panel_bottom->SetBackgroundColour(wxColor(100, 200, 100));
 
-    wxPanel *panel_bottom_right = new wxPanel(this, wxID_ANY, wxDefaultPosition, wxSize(200, 100));
+    wxPanel *panel_bottom_right = new wxPanel(panel_bottom, wxID_ANY, wxDefaultPosition, wxSize(200, 100));
     panel_bottom_right->SetBackgroundColour(wxColor(200, 200, 100));
 
     wxBoxSizer *sizer = new wxBoxSizer(wxVERTICAL);
     sizer->Add(panel_top, 1, wxEXPAND | wxLEFT | wxTOP | wxRIGHT, 10);
+    sizer->Add(panel_bottom, 1, wxEXPAND | wxALL, 10);
 
     wxSizer *sizer_bottom = new wxBoxSizer(wxHORIZONTAL);
-    sizer_bottom->Add(panel_bottom, 1, wxEXPAND | wxRIGHT, 10);
-    sizer_bottom->Add(panel_bottom_right, 1, wxEXPAND, 0);
+    sizer_bottom->Add(panel_bottom_right, 1, wxEXPAND | wxALL, 10);
 
-    sizer->Add(sizer_bottom, 2, wxEXPAND | wxALL, 10);
+    panel_bottom->SetSizerAndFit(sizer_bottom);
 
     this->SetSizerAndFit(sizer);
 }
