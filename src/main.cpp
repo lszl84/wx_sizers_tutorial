@@ -1,4 +1,5 @@
 #include <wx/wx.h>
+#include <wx/splitter.h>
 
 class MyApp : public wxApp
 {
@@ -23,4 +24,13 @@ bool MyApp::OnInit()
 
 MyFrame::MyFrame(const wxString &title, const wxPoint &pos, const wxSize &size) : wxFrame(nullptr, wxID_ANY, title, pos, size)
 {
+    wxSplitterWindow *splitter = new wxSplitterWindow(this);
+
+    wxPanel *left = new wxPanel(splitter);
+    wxPanel *right = new wxPanel(splitter);
+
+    left->SetBackgroundColour(wxColor(200, 100, 100));
+    right->SetBackgroundColour(wxColor(100, 200, 100));
+
+    splitter->SplitVertically(left, right);
 }
