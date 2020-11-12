@@ -27,13 +27,23 @@ MyFrame::MyFrame(const wxString &title, const wxPoint &pos, const wxSize &size) 
     wxSplitterWindow *splitter = new wxSplitterWindow(this, wxID_ANY, wxDefaultPosition, wxDefaultSize,
                                                       wxSP_BORDER | wxSP_LIVE_UPDATE);
 
+    wxSplitterWindow *right_splitter = new wxSplitterWindow(splitter, wxID_ANY, wxDefaultPosition, wxDefaultSize,
+                                                            wxSP_BORDER | wxSP_LIVE_UPDATE);
+
     wxPanel *left = new wxPanel(splitter);
-    wxPanel *right = new wxPanel(splitter);
+    wxPanel *right = new wxPanel(right_splitter);
+    wxPanel *bottom = new wxPanel(right_splitter);
 
     left->SetBackgroundColour(wxColor(200, 100, 100));
     right->SetBackgroundColour(wxColor(100, 200, 100));
+    bottom->SetBackgroundColour(wxColor(200, 200, 100));
+
+    right_splitter->SetMinimumPaneSize(100);
+    right_splitter->SplitHorizontally(right, bottom);
+
+    right_splitter->SetSashGravity(0);
 
     splitter->SetMinimumPaneSize(200);
 
-    splitter->SplitVertically(left, right);
+    splitter->SplitVertically(left, right_splitter);
 }
