@@ -24,13 +24,16 @@ bool MyApp::OnInit()
 
 MyFrame::MyFrame(const wxString &title, const wxPoint &pos, const wxSize &size) : wxFrame(nullptr, wxID_ANY, title, pos, size)
 {
-    wxSplitterWindow *splitter = new wxSplitterWindow(this);
+    wxSplitterWindow *splitter = new wxSplitterWindow(this, wxID_ANY, wxDefaultPosition, wxDefaultSize,
+                                                      wxSP_BORDER | wxSP_LIVE_UPDATE);
 
     wxPanel *left = new wxPanel(splitter);
     wxPanel *right = new wxPanel(splitter);
 
     left->SetBackgroundColour(wxColor(200, 100, 100));
     right->SetBackgroundColour(wxColor(100, 200, 100));
+
+    splitter->SetMinimumPaneSize(200);
 
     splitter->SplitVertically(left, right);
 }
