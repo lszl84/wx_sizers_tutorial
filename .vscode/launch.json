@@ -1,14 +1,29 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "(lldb) Launch",
-      "type": "lldb",
-      // Running the program does not work correctly in vscode - it's sent to the background.
-      // So we run it using a task instead and then attach to the running program.
-      "request": "launch",
-      "program": "${workspaceFolder}/build/subprojects/Build/wx_sizers_tutorial_core/main.app",
-      "preLaunchTask": "Build with CMake"
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb-mac) Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/subprojects/Build/wx_sizers_tutorial_core/main.app",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build with CMake"
+        },
+        {
+            "name": "(lldb-linux) Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/subprojects/Build/wx_sizers_tutorial_core/main",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build with CMake"
+        },
+        {
+            "name": "(msvc) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\build\\subprojects\\Build\\wx_sizers_tutorial_core\\Debug\\main.exe",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build with CMake"
+        }
+    ]
 }
