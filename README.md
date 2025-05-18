@@ -6,11 +6,11 @@ This tutorial shows how to use `wxSizer` in wxWidgets to create a simple layout.
 ![Sizers](/app.png)
 
 See the following for more information:
-- [the blog post](https://www.lukesdevtutorials.com/post/wxwidgets-layout-basics/)
+- [the blog post](https://www.onlyfastcode.com/post/wxwidgets-layout-basics/)
 - [the video tutorial](https://www.youtube.com/watch?v=kPB5Y6ef9dw)
 
 The links above contain more extensive information about the code, for example, how to combine Sizers to achieve effects like centering, alignment, and more.
 
 ---
-Check out the blog for more! [www.lukesdevtutorials.com](https://www.lukesdevtutorials.com)
+Check out the blog for more! [www.onlyfastcode.com](https://www.onlyfastcode.com)
 ---
