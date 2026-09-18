@@ -12,6 +12,5 @@ See the following for more information:
 The links above contain more extensive information about the code, for example, how to combine Sizers to achieve effects like centering, alignment, and more.
 
 ---
-📚 More C++ and wxWidgets tutorials: [devmindscape.com](https://devmindscape.com) · 💼 Available for contract work: [devmindscape.com/work](https://devmindscape.com/work/)
-
----
+📚 More C++ and wxWidgets tutorials: [devmindscape.com](https://devmindscape.com)\
+💼 Available for contract work: [devmindscape.com/work](https://devmindscape.com/work/)
